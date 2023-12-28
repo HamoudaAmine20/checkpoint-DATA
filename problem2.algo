@@ -1,0 +1,26 @@
+//a procedure, called dot_product which calculates in the variable ps,the dotscalar product of v1 and v2
+PROCEDURE dot_product(VAR ps:INTEGER,tab1,tab2:INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO V1.length-1 STEP 1  DO
+     ps=tab1[i]*tab2[i] 
+    END_FOR
+END
+
+
+//an algorithm which determines, for n pairs of given vectors, whether two vectors of given IR are orthogonal,
+ALGORITHM dot_product
+VAR
+    V1,V2: ARRAY_OF INTEGER[50];
+    ps:INTEGER:=0;
+BEGIN
+read(v1);
+read(v2);
+    dot_product(ps,V1,V2)
+    IF (ps=0) THEN
+        write("are orthogonal")
+    ELSE
+        write("are not orthogonal")
+    END_IF
+END
